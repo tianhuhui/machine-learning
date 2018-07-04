@@ -19,7 +19,8 @@ matplotlibÊÇpython×îÖøÃûµÄ»æÍ¼¿â£¬ËüÌá¹©ÁËÒ»ÕûÌ×ºÍMATLABÏêÏ¸µÄÃüÁîAPI£¬Ê®·ÖÊÊºÏ½
 ### ÏÂÔØµØÖ·
 Python£ºhttps://www.python.org/downloads/
 NumPy£ºhttps://pypi.python.org/pypi/numpy
-£¨or http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy£¬Á´½ÓÁË mkl ÓëÎ´Á´½Ó mkl µÄnumpyÔÚĞÔÄÜÉÏ»áÓĞÏÔÖø²îÒì£¬Äã¿ÉÒÔÇ°ÍùÉÏÊöÍøÖ·°²×°Á´½ÓÁË mkl ¿âµÄ numpy£©
+£¨or http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy£¬
+Á´½ÓÁË mkl ÓëÎ´Á´½Ó mkl µÄnumpyÔÚĞÔÄÜÉÏ»áÓĞÏÔÖø²îÒì£¬Äã¿ÉÒÔÇ°ÍùÉÏÊöÍøÖ·°²×°Á´½ÓÁË mkl ¿âµÄ numpy£©
 SciPy£ºhttp://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy
 matplotlib£ºhttp://www.lfd.uci.edu/~gohlke/pythonlibs/#matplotlib
 sciki-learn£ºhttp://www.lfd.uci.edu/~gohlke/pythonlibs/#scikit-learn
