@@ -1,19 +1,20 @@
-¹ÙÍøÁ´½Ó£º
+å®˜ç½‘é“¾æ¥ï¼š
 https://www.tensorflow.org/versions/r0.12/tutorials/mnist/beginners/
 
-MNISTÊÇÒ»¸ö¼òµ¥µÄ»úÆ÷ÊÓ¾õÊı¾İ¼¯£¬Ëü°üÀ¨ÊÖĞ´Êı×ÖµÄÍ¼Æ¬£¬ÀıÈç£º
+MNISTæ˜¯ä¸€ä¸ªç®€å•çš„æœºå™¨è§†è§‰æ•°æ®é›†ï¼Œå®ƒåŒ…æ‹¬æ‰‹å†™æ•°å­—çš„å›¾ç‰‡ï¼Œä¾‹å¦‚ï¼š
 ![title](https://leanote.com/api/file/getImage?fileId=59872c9eab6441463e0016a5)
 
-Êı¾İ¼¯Ò²°üÀ¨ÁËÃ¿¸öÍ¼Æ¬µÄ±êÇ©£¨label£©£¬¸æËßÎÒÃÇÊÇÊ²Ã´Êı×Ö£¬ÀıÈçÉÏÃæ¼¸¸öÍ¼Æ¬µÄ±êÇ©ÒÀ´ÎÊÇ5¡¢0¡¢4¡¢1¡£
+æ•°æ®é›†ä¹ŸåŒ…æ‹¬äº†æ¯ä¸ªå›¾ç‰‡çš„æ ‡ç­¾ï¼ˆlabelï¼‰ï¼Œå‘Šè¯‰æˆ‘ä»¬æ˜¯ä»€ä¹ˆæ•°å­—ï¼Œä¾‹å¦‚ä¸Šé¢å‡ ä¸ªå›¾ç‰‡çš„æ ‡ç­¾ä¾æ¬¡æ˜¯5ã€0ã€4ã€1ã€‚
 
 ------------------------------
-# MNISTÊı¾İ¼¯
-Êı¾İ¼¯ÔÚÍøÕ¾http://yann.lecun.com/exdb/mnist/ÉÏ£¬ÒÔÏÂÁ½ĞĞ¿ÉÒÔ×Ô¶¯ÏÂÔØºÍµ¼ÈëÊı¾İ¼¯£º
+# MNISTæ•°æ®é›†
+æ•°æ®é›†åœ¨ç½‘ç«™http://yann.lecun.com/exdb/mnist/
+ä¸Šï¼Œä»¥ä¸‹ä¸¤è¡Œå¯ä»¥è‡ªåŠ¨ä¸‹è½½å’Œå¯¼å…¥æ•°æ®é›†ï¼š
 
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
-²»¹ı¾­¹ı²âÊÔ£¬ÏÂÔØµÄËÙ¶È·Ç³£Âı£¬¿ÉÒÔÖ±½Ó´ÓÊı¾İ¼¯ÍøÕ¾ÉÏÊÖ¶¯ÏÂÔØÊı¾İ¼¯£¬ÏÂÔØÒÔÏÂËÄ¸öÎÄ¼ş£º
+ä¸è¿‡ç»è¿‡æµ‹è¯•ï¼Œä¸‹è½½çš„é€Ÿåº¦éå¸¸æ…¢ï¼Œå¯ä»¥ç›´æ¥ä»æ•°æ®é›†ç½‘ç«™ä¸Šæ‰‹åŠ¨ä¸‹è½½æ•°æ®é›†ï¼Œä¸‹è½½ä»¥ä¸‹å››ä¸ªæ–‡ä»¶ï¼š
 train-images-idx3-ubyte.gz:  training set images (9912422 bytes) 
 train-labels-idx1-ubyte.gz:  training set labels (28881 bytes) 
 t10k-images-idx3-ubyte.gz:   test set images (1648877 bytes) 
@@ -21,24 +22,24 @@ t10k-labels-idx1-ubyte.gz:   test set labels (4542 bytes)
 
 
 
-MNISTÊı¾İ¼¯°üº¬Èı²¿·Ö£º55000¸öÊı¾İÓÃÓÚÑµÁ·£¬10000¸öÊı¾İÓÃÓÚ²âÊÔ£¬5000¸öÊı¾İÓÃÓÚÑéÖ¤¡£
+MNISTæ•°æ®é›†åŒ…å«ä¸‰éƒ¨åˆ†ï¼š55000ä¸ªæ•°æ®ç”¨äºè®­ç»ƒï¼Œ10000ä¸ªæ•°æ®ç”¨äºæµ‹è¯•ï¼Œ5000ä¸ªæ•°æ®ç”¨äºéªŒè¯ã€‚
 
-ÈçÇ°ËùÊö£¬Ã¿¸öMNISTÊı¾İ°üº¬2²¿·Ö£ºÒ»¸öÊÖĞ´Êı×ÖµÄÍ¼ÏñºÍÒ»¸ö¶ÔÓ¦µÄ±êÇ©£¬ÎÒÃÇ¿ÉÒÔ³ÆÍ¼Ïñ¡°x¡±ºÍ±êÇ©¡°y¡±¡£
+å¦‚å‰æ‰€è¿°ï¼Œæ¯ä¸ªMNISTæ•°æ®åŒ…å«2éƒ¨åˆ†ï¼šä¸€ä¸ªæ‰‹å†™æ•°å­—çš„å›¾åƒå’Œä¸€ä¸ªå¯¹åº”çš„æ ‡ç­¾ï¼Œæˆ‘ä»¬å¯ä»¥ç§°å›¾åƒâ€œxâ€å’Œæ ‡ç­¾â€œyâ€ã€‚
 
-Ã¿Ò»ÕÅÍ¼Æ¬ÊÇ28*28ÏñËØµÄ£¬ÎÒÃÇ¿ÉÒÔ°ÑÕâ¸öÍ¼Æ¬½âÊÍÎªÒ»¸ö´óµÄÊı×é£º
+æ¯ä¸€å¼ å›¾ç‰‡æ˜¯28*28åƒç´ çš„ï¼Œæˆ‘ä»¬å¯ä»¥æŠŠè¿™ä¸ªå›¾ç‰‡è§£é‡Šä¸ºä¸€ä¸ªå¤§çš„æ•°ç»„ï¼š
 ![title](https://leanote.com/api/file/getImage?fileId=598731b4ab6441463e00171f)
 
-ÎÒÃÇ¿ÉÒÔ°ÑÕâ¸öÊı×éÆ½ÆÌ³ÉÒ»¸ö28*28=784Î¬µÄÏòÁ¿£¬ÕâÑùÎÒÃÇ¾Í¿ÉÒÔ°ÑÃ¿ÕÅÍ¼Æ¬¿´³ÉÒ»¸ö784Î¬ÏòÁ¿¿Õ¼äÖĞµÄÒ»¸öµã¡£
+æˆ‘ä»¬å¯ä»¥æŠŠè¿™ä¸ªæ•°ç»„å¹³é“ºæˆä¸€ä¸ª28*28=784ç»´çš„å‘é‡ï¼Œè¿™æ ·æˆ‘ä»¬å°±å¯ä»¥æŠŠæ¯å¼ å›¾ç‰‡çœ‹æˆä¸€ä¸ª784ç»´å‘é‡ç©ºé—´ä¸­çš„ä¸€ä¸ªç‚¹ã€‚
 
-ÕâÑùµÄ»°£¬mnist.train.images¾ÍÊÇÒ»¸ötensor£¬ÆäshapeÊÇ[55000, 784]¡£
+è¿™æ ·çš„è¯ï¼Œmnist.train.imageså°±æ˜¯ä¸€ä¸ªtensorï¼Œå…¶shapeæ˜¯[55000, 784]ã€‚
 ![title](https://leanote.com/api/file/getImage?fileId=598732ccab6441463e001738)
 
-ÔÚ±¾Ê¾ÀıÖĞ£¬ÎÒÃÇÏë°ÑÊı¾İ±êÇ©±ä³É¡°one-hotÏòÁ¿¡±£¬ËùÎ½µÄone-hotÏòÁ¿¾ÍÊÇÒ»¸öÏòÁ¿£¬Ö»ÓĞÒ»¸öÎ¬¶ÈÊÇ1£¬ÆäÓà¾ùÊÇ0.ÔÚ±¾Àı×ÓÖĞ£¬µÚn¸öÊı×Ö¿ÉÒÔ±íÊ¾ÎªÒ»¸öÔÚµÚnÎ¬ÊÇ1µÄÒ»¸öone-hotÏòÁ¿£¬ÀıÈçÊı×Ö3¶ÔÓ¦µÄ¾ÍÊÇ[0,0,0,1,0,0,0,0,0,0]. ÏàÓ¦µÄ£¬mnist.train.labels¾ÍÊÇshapeÊÇ[55000, 10]µÄÒ»¸ötensor¡£
+åœ¨æœ¬ç¤ºä¾‹ä¸­ï¼Œæˆ‘ä»¬æƒ³æŠŠæ•°æ®æ ‡ç­¾å˜æˆâ€œone-hotå‘é‡â€ï¼Œæ‰€è°“çš„one-hotå‘é‡å°±æ˜¯ä¸€ä¸ªå‘é‡ï¼Œåªæœ‰ä¸€ä¸ªç»´åº¦æ˜¯1ï¼Œå…¶ä½™å‡æ˜¯0.åœ¨æœ¬ä¾‹å­ä¸­ï¼Œç¬¬nä¸ªæ•°å­—å¯ä»¥è¡¨ç¤ºä¸ºä¸€ä¸ªåœ¨ç¬¬nç»´æ˜¯1çš„ä¸€ä¸ªone-hotå‘é‡ï¼Œä¾‹å¦‚æ•°å­—3å¯¹åº”çš„å°±æ˜¯[0,0,0,1,0,0,0,0,0,0]. ç›¸åº”çš„ï¼Œmnist.train.labelså°±æ˜¯shapeæ˜¯[55000, 10]çš„ä¸€ä¸ªtensorã€‚
 ![title](https://leanote.com/api/file/getImage?fileId=598733e0ab644143e40015e2)
 
 -----------------------------
-# Softmax»Ø¹é
-ÕâÀïÎÒÃÇ¶¨ÒåÒ»¸ö×î¼òµ¥µÄµ¥²ãÈ«Á¬½ÓÍøÂç£¬¼ÆËã¹«Ê½Îª£ºy=Wx+b,È»ºóÀûÓÃsoftmaxÀ´¼ÆËãÔ¤²â¸ÅÂÊ£¬Ô¤²â¸ÅÂÊ×î´óµÄ¶ÔÓ¦Ô¤²âµÄ·ÖÀà¡£
+# Softmaxå›å½’
+è¿™é‡Œæˆ‘ä»¬å®šä¹‰ä¸€ä¸ªæœ€ç®€å•çš„å•å±‚å…¨è¿æ¥ç½‘ç»œï¼Œè®¡ç®—å…¬å¼ä¸ºï¼šy=Wx+b,ç„¶ååˆ©ç”¨softmaxæ¥è®¡ç®—é¢„æµ‹æ¦‚ç‡ï¼Œé¢„æµ‹æ¦‚ç‡æœ€å¤§çš„å¯¹åº”é¢„æµ‹çš„åˆ†ç±»ã€‚
 
 ![title](https://leanote.com/api/file/getImage?fileId=59873456ab6441463e00177a)
 
@@ -47,65 +48,65 @@ MNISTÊı¾İ¼¯°üº¬Èı²¿·Ö£º55000¸öÊı¾İÓÃÓÚÑµÁ·£¬10000¸öÊı¾İÓÃÓÚ²âÊÔ£¬5000¸öÊı¾İÓÃÓÚÑ
 ![title](https://leanote.com/api/file/getImage?fileId=59873482ab644143e40015ec)
 
 ---------------------------
-# ´úÂëÊµÏÖ
-## ¶¨ÒåÉñ¾­ÍøÂçÄ£ĞÍ
-Ê×ÏÈimport TensorFlow£º
+# ä»£ç å®ç°
+## å®šä¹‰ç¥ç»ç½‘ç»œæ¨¡å‹
+é¦–å…ˆimport TensorFlowï¼š
 
     import tensorflow as tf
 
-ÊäÈëx£º
+è¾“å…¥xï¼š
 
     x = tf.placeholder(tf.float32, [None, 784])
 
-¶¨Î»±äÁ¿WºÍb£º
+å®šä½å˜é‡Wå’Œbï¼š
 
     W = tf.Variable(tf.zeros([784, 10]))
     b = tf.Variable(tf.zeros([10]))
 
-¶¨ÒåÎÒÃÇµÄÄ£ĞÍ£¬Ö»ĞèÒªÒ»ĞĞ¸ã¶¨£º
+å®šä¹‰æˆ‘ä»¬çš„æ¨¡å‹ï¼Œåªéœ€è¦ä¸€è¡Œæå®šï¼š
 
     y = tf.nn.softmax(tf.matmul(x, W) + b)
 
-## ÑµÁ·Ä£ĞÍ
-ÎÒÃÇ²ÉÓÃcross-entropy×÷ÎªËğÊ§º¯Êı£º
+## è®­ç»ƒæ¨¡å‹
+æˆ‘ä»¬é‡‡ç”¨cross-entropyä½œä¸ºæŸå¤±å‡½æ•°ï¼š
 ![title](https://leanote.com/api/file/getImage?fileId=598737f8ab6441463e0017d2)
 
-ÆäÖĞ£¬![title](https://leanote.com/api/file/getImage?fileId=59873e80ab6441463e00184c)ÊÇÎÒÃÇÔ¤²âµÄ·Ö²¼£¬![title](https://leanote.com/api/file/getImage?fileId=59873eaaab644143e40016e1)ÊÇÕæÊµµÄ·Ö²¼¡£
+å…¶ä¸­ï¼Œ![title](https://leanote.com/api/file/getImage?fileId=59873e80ab6441463e00184c)æ˜¯æˆ‘ä»¬é¢„æµ‹çš„åˆ†å¸ƒï¼Œ![title](https://leanote.com/api/file/getImage?fileId=59873eaaab644143e40016e1)æ˜¯çœŸå®çš„åˆ†å¸ƒã€‚
 
-¶¨ÒåÕæÊµÊä³öÖµ£º
+å®šä¹‰çœŸå®è¾“å‡ºå€¼ï¼š
 
     y_ = tf.placeholder(tf.float32, [None, 10])
 
-¶¨ÒåËğÊ§º¯Êı£º
+å®šä¹‰æŸå¤±å‡½æ•°ï¼š
 
     cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 
-Ñ¡ÔñÓÅ»¯Ëã·¨£¬ÕâÀïÑ¡ÔñµÄÊÇÌİ¶ÈÏÂ½µ·¨£º
+é€‰æ‹©ä¼˜åŒ–ç®—æ³•ï¼Œè¿™é‡Œé€‰æ‹©çš„æ˜¯æ¢¯åº¦ä¸‹é™æ³•ï¼š
 
     train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 
-¶¨Òå»á»°£¬ÔËĞĞÔËËãºÍ³õÊ¼»¯±äÁ¿£º
+å®šä¹‰ä¼šè¯ï¼Œè¿è¡Œè¿ç®—å’Œåˆå§‹åŒ–å˜é‡ï¼š
 
     init = tf.global_variables_initializer()
     sess = tf.Session()
     sess.run(init)
 
-¿ªÊ¼ÑµÁ·²ÎÊı£º
+å¼€å§‹è®­ç»ƒå‚æ•°ï¼š
 
     for i in range(1000):
       batch_xs, batch_ys = mnist.train.next_batch(100)
       sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
       
-## ÆÀ¹ÀÄ£ĞÍ
+## è¯„ä¼°æ¨¡å‹
 
     correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
     
-×îºó×¼È·ÂÊÔ¼Îª92%¡£
+æœ€åå‡†ç¡®ç‡çº¦ä¸º92%ã€‚
 
 -------------------------------
-# ÍêÕû´úÂëÈçÏÂ£º
+# å®Œæ•´ä»£ç å¦‚ä¸‹ï¼š
 
     import tensorflow as tf
     from tensorflow.examples.tutorials.mnist import input_data
@@ -133,22 +134,22 @@ MNISTÊı¾İ¼¯°üº¬Èı²¿·Ö£º55000¸öÊı¾İÓÃÓÚÑµÁ·£¬10000¸öÊı¾İÓÃÓÚ²âÊÔ£¬5000¸öÊı¾İÓÃÓÚÑ
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 
-ËµÃ÷£º¾­¹ı²âÊÔ£¬ÏÂÔØÊı¾İ¼¯µÄËÙ¶È·Ç³£Âı£¬¿ÉÒÔÖ±½Ó´ÓÊı¾İ¼¯ÍøÕ¾ÉÏÊÖ¶¯ÏÂÔØÊı¾İ¼¯£¬ÏÂÔØÒÔÏÂËÄ¸öÎÄ¼ş£º
+è¯´æ˜ï¼šç»è¿‡æµ‹è¯•ï¼Œä¸‹è½½æ•°æ®é›†çš„é€Ÿåº¦éå¸¸æ…¢ï¼Œå¯ä»¥ç›´æ¥ä»æ•°æ®é›†ç½‘ç«™ä¸Šæ‰‹åŠ¨ä¸‹è½½æ•°æ®é›†ï¼Œä¸‹è½½ä»¥ä¸‹å››ä¸ªæ–‡ä»¶ï¼š
 train-images-idx3-ubyte.gz:  training set images (9912422 bytes) 
 train-labels-idx1-ubyte.gz:  training set labels (28881 bytes) 
 t10k-images-idx3-ubyte.gz:   test set images (1648877 bytes) 
 t10k-labels-idx1-ubyte.gz:   test set labels (4542 bytes)
-È»ºóÔÚÉÏÊö³ÌĞòËùÔÚµÄÍ¬Ò»¸öÄ¿Â¼ÏÂ£¬ĞÂ½¨ÎÄ¼ş¼ĞMNIST_data£¬°ÑÒÔÉÏËÄ¸öÎÄ¼ş·Åµ½ÎÄ¼ş¼ĞÀïÃæ¡£
+ç„¶ååœ¨ä¸Šè¿°ç¨‹åºæ‰€åœ¨çš„åŒä¸€ä¸ªç›®å½•ä¸‹ï¼Œæ–°å»ºæ–‡ä»¶å¤¹MNIST_dataï¼ŒæŠŠä»¥ä¸Šå››ä¸ªæ–‡ä»¶æ”¾åˆ°æ–‡ä»¶å¤¹é‡Œé¢ã€‚
 
-³ÌĞòÔËĞĞ½á¹û£º
+ç¨‹åºè¿è¡Œç»“æœï¼š
 ![title](https://leanote.com/api/file/getImage?fileId=5991b7dfab644147bd002578)
-½á¹û±íÃ÷£¬×îºóµÄÄ£ĞÍ×¼È·ÂÊÎª91.72%¡£
+ç»“æœè¡¨æ˜ï¼Œæœ€åçš„æ¨¡å‹å‡†ç¡®ç‡ä¸º91.72%ã€‚
 
-¹Ù·½GitHub´úÂëµØÖ·£º
+å®˜æ–¹GitHubä»£ç åœ°å€ï¼š
 https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/mnist/mnist_softmax.py
 
 ------------------------------------
-# ²Î¿¼×ÊÁÏ
+# å‚è€ƒèµ„æ–™
 https://www.tensorflow.org/versions/r0.12/tutorials/mnist/beginners/
 http://yann.lecun.com/exdb/mnist/
 http://www.jianshu.com/p/87581c7082ba
